@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+body{
+    background-color:rgb(31, 151, 109);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family:'Ubuntu',sans-serif;
+
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    height:70px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    color:aliceblue;
+}
+.logo img{
+    height:70px;
+    width: 75px;
+    border-radius:80px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+nav ul li{
+    padding: 0 15px;
+}
+.search-bar {
+	width: 35%;
+	position: relative;
+    margin-left:520px;
+}
+
+.search-bar input {
+	width: 100%;
+	font-size: 12px;
+	border: white;
+	padding: 5px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration:none;
+	border-radius: 20px;
+	background-color: #660640;
+	color: white;
+	transition: all ease-in-out 0.5s;
+}
+
+.search-ico {
+	color: rgb(238, 239, 239);
+}
+.mic-ico {
+	color: rgb(236, 241, 241);
+}
+.search-bar  div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	left: 3%;
+	top: 20%;
+	transition: all ease-in-out 0.1s;
+}
+.search-bar  div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	right: 0%;
+	top: 20%;
+}
+/* notification bell image */
+.notification-bell .fa-bell {
+	width: 15px;
+	height: 10px;
+	animation-name: ringing_bell;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
+	border-radius: 100%;
+	margin-left:80px;
+}
+/* animation for bell image */
+@keyframes ringing_bell {
+	0% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+/* profile picture of the user */
+.profile-picture .fa-user {
+	width: 50px;
+	height: 13px;
+	border-radius: 100%;
+	padding-left: -30px;
+}
+.container{
+	min-height: 70vh;
+	background-color:black;
+	color: whitesmoke;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	display: flex;
+	width: 70%;
+	margin:23px auto;
+	border-radius: 20px;
+	padding: 20px;
+	background-image:url(https://i.pinimg.com/564x/85/de/f5/85def536b452d8f6e1113bcdf823883d.jpg) ;
+	background-repeat: no-repeat;
+	background-size: 440px 555px;
+	background-position: right;
+}
+.bottom{
+	position: sticky;
+	height: 70px;
+	background-color: black;
+	bottom:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.icons{
+	margin-bottom: 10px;
+}
+.icons i{
+	cursor: pointer;
+}
+
+
+
+#myprogressbar{
+	width:80vw;
+	cursor: pointer;
+}
+
+.songitem{
+	height:30px;
+	display:flex;
+	background-color: white;
+	width:130%;
+	color:black;
+	margin:12px 0;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+}
+.songitem img{
+	width: 25px;
+	margin:0 23px;
+	border-radius: 15px;
+}
+.timestamp{
+	margin:0 23px;
+}
+
+.timestamp i{
+	cursor: pointer;
+}
+
+.songitemcontainer{
+	margin-top: auto;
+}
+
+.songinfo{
+	position:absolute;
+	left:10vh;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.songinfo img{
+	opacity: 0;
+	transition: opacity 1s ease-in;
+}
+#masterSongName{
+	color:greenyellow;
+	font-weight: bolder;
+
+}
+
+
+@media only screen and (max-width: 768px){
+	nav{
+		width:410px;
+		font-size: small;
+		display: flex;
+		flex-direction: row;
+		
+	}
+	.search-bar{
+		display: none;
+	}
+	.profile-picture{
+		display: none;
+	}
+	.notification-bell{
+		display: none;
+	}
+	.container{
+		width:80%;
+		align-items: center;
+		margin-left: 35px;
+
+	}
+	.songitemcontainer{
+		width:240px;
+	}
+	#title{
+		color:black;
+		font-weight: bolder;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	.bottom{
+		width:410px;
+		padding-bottom: 30px;
+	}
+	body{
+		overflow: hidden;
+	}
+	.songinfo{
+		margin-top: -35px;
+		
+	}
+
+}
